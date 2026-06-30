@@ -54,7 +54,7 @@ def _call_gemini(prompt: str) -> str:
         model="gemini-2.5-flash",
         contents=prompt[:500],
         config=types.GenerateContentConfig(
-            max_output_tokens=1000
+            max_output_tokens=2000
         ),
     )
 
