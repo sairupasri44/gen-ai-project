@@ -1,0 +1,25 @@
+# ============================================================
+# requirements.txt
+# FinRelief AI — FastAPI Backend Dependencies
+# AI Powered Debt Relief and Financial Recovery Platform
+# ============================================================
+# Install all dependencies using:
+#   pip install -r requirements.txt
+# ============================================================
+
+# --- Web Framework ---
+fastapi==0.115.0          # Core FastAPI web framework for building REST APIs
+uvicorn==0.30.6           # ASGI server that runs the FastAPI application
+
+# --- Data Validation ---
+pydantic==2.8.2           # Request/response model validation (used in main.py)
+
+# --- Database ---
+sqlalchemy==2.0.36        # SQL toolkit and ORM for structured database access
+# Note: sqlite3 is built into Python — no install needed
+
+# --- Environment Variables ---
+python-dotenv==1.2.2      # Loads GEMINI_API_KEY from .env file into os.environ (patched CVE symlink fix)
+
+# --- Google Gemini AI ---
+google-generativeai==0.8.3  # Google Gemini AI SDK for generating financial advice

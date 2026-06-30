@@ -1,0 +1,242 @@
+/* App.css — FinRelief AI Frontend Styles */
+
+/* ── Global Reset ────────────────────────────────────────────────────────── */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #071226;
+}
+
+/* ── Page Layout ─────────────────────────────────────────────────────────── */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 16px;
+  box-sizing: border-box;
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  background: #121d35;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* ── Typography ──────────────────────────────────────────────────────────── */
+
+h1 {
+  color: #ffffff;
+  font-size: 28px;
+  margin: 0 0 6px 0;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 24px 0 16px 0;
+  border-top: 1px solid #1e2f52;
+  padding-top: 20px;
+}
+
+.subtitle {
+  color: #8899bb;
+  font-size: 14px;
+  margin: 0 0 24px 0;
+}
+
+/* ── Inputs ──────────────────────────────────────────────────────────────── */
+
+input {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 1px solid #1e2f52;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #0d1829;
+  color: #ffffff;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: #4f46e5;
+}
+
+input::placeholder {
+  color: #4a5a7a;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+button:hover {
+  background: #3730a3;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #1e2f52;
+}
+
+.btn-secondary:hover {
+  background: #2a3f6e;
+}
+
+/* ── Error Message ───────────────────────────────────────────────────────── */
+
+.error {
+  color: #f87171;
+  font-size: 13px;
+  margin: 10px 0 0 0;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+/* ── Loading Spinner ─────────────────────────────────────────────────────── */
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid #1e2f52;
+  border-top: 4px solid #4f46e5;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: #8899bb;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* ── Result Rows ─────────────────────────────────────────────────────────── */
+
+.results {
+  margin-top: 8px;
+  text-align: left;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #1e2f52;
+}
+
+.result-label {
+  color: #8899bb;
+  font-size: 14px;
+}
+
+.result-value {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ── Health and Settlement Badges ────────────────────────────────────────── */
+
+.result-badge {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* Green — Good / High */
+.badge-good {
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+}
+
+/* Yellow — At Risk / Medium */
+.badge-risk {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+/* Red — Critical / Low */
+.badge-critical {
+  background: rgba(248, 113, 113, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.4);
+}
+
+/* ── AI Advice Box ───────────────────────────────────────────────────────── */
+
+.advice-box {
+  margin-top: 20px;
+  background: #0d1829;
+  border: 1px solid #1e2f52;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+}
+
+.advice-label {
+  color: #4f46e5;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+}
+
+.advice-text {
+  color: #c8d5ee;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  white-space: pre-line;
+}
